@@ -1,5 +1,5 @@
 # ideamk
 
-## ideamk_master
+## master
 
-## ideamk_idea
+### ideamk
