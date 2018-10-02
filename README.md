@@ -1,1 +1,1 @@
-# ideamk.
+# ideamk
