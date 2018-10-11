@@ -1,0 +1,38 @@
+html, body{
+    height: 100%;
+  }
+body{
+    background-image: url('./response.jpg'); /* 배경 이미지 경로지정 */
+    background-position: center;  /* 배경 이미지를 위치지정 */
+    background-size: cover;  
+    /* 배경 이미지를 사이즈지정(화면의 크기보다 이미지가 작으면 이미지는 반복되어져서 나타납니다. 그래서 저는 cover 값을 주어서 이미지를 들어가야하는 사이즈에 맞게 변경시켰습니다. cover를 값으로 주면 크기에 맞게 이미지를 늘리거나 또는 가장자리를 조금 잘라서 지정한 크기게 맞게 만들어줍니다.)    
+    */
+    margin: 0;
+}
+#wrap div{
+    color: white;
+    text-align: center;
+  }
+#wrap{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#wrap div:first-child{
+    margin-bottom: 40px;
+}
+#wrap div:nth-child(2){
+    border-top: 2px solid white;
+    padding-top: 40px;
+}    
+/* @media [only 또는 not] [미디어유형] [and 또는 ,] (조건문){실행문}의 
+형태입니다.
+only나 not의 경우 필요 없으면 사용하지 않으셔도 되고, 미디어유형은 생략하실 경우 미디어 전체를 뜻하는 all이 기본값이 됩니다. 조건문에는 min-width나 max-width와 같은 형태가 들어갑니다. min-width는 너비가 지정한 min-width값 이상일때 적용되고, max-width의 경우엔 너비가 지정한 max-width값 이하일 때 적용됩니다. @media all and (max-width:768px){실행문}의 경우엔 768px 이하일 경우엔 실행문이 실행됩니다
+*/
+@media all and (min-width:980px){
+    #wrap div:first-child{
+        font-size: 2rem;
+    }
+}
