@@ -1,0 +1,24 @@
+/* 데스크톱 */
+@media all and (min-width:1025px){
+    header{
+      flex-direction: row;
+    }
+  header h2{
+    font-size: 2rem;
+    padding: 1.5rem;
+    flex-basis: 20%;
+  
+  }
+  header nav{
+    flex-basis: 80%;
+  }
+  header nav ul{
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  header nav ul li{
+    margin-right: 1.7rem;
+  }
+  }

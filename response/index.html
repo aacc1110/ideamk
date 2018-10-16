@@ -6,29 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Responsive Single Page Template With Flexbox</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <div id="wrap">
+  <div id="wrap-pc">
     <header>
-      <h2><a href="#">Logo</a></h2>
+      <h2><a href="#">PC버전</a></h2>
       <nav>
         <ul>
           <li><a href="response3.html">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="response1.html">About</a></li>
           <li><a href="#">Contacts</a></li>
         </ul>
       </nav>
     </header>
-
-    <section class="home">
-      <div class="background">
-        <h1>Responsive Flexbox Template</h1>
-        <h3>Just make By Yourself</h3>
-        <a href="http://justmakeyourself.tistory.com/" class="btn" target="_blank">lemon candy's blog</a>
-      </div>
-    </section>
   </div>
+  <div id="wrap-mobile">
+      <header>
+        <h2><a href="#">모바일버전</a></h2>
+        <nav>
+          <ul>
+            <li><a href="response3.html">Home</a></li>
+            <li><a href="response1.html">About</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+<script type="text/javascript">
+      var filter = "win16|win32|win64|mac|macintel";   
+      var testdiv = document.getElementById('test');
+      if( navigator.platform  ){
+          if( filter.indexOf(navigator.platform.toLowerCase())<0 ){
+              alert("모바일 기기에서 접속");
+          }else{
+              alert("PC에서 접속"); 
+              document.getElementById("wrap-mobile").style.display="none";
+              alert("성공?");
+          }
+      }
+  </script>
+  <main>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam temporibus repellat voluptatem sit nulla commodi, maxime optio aperiam! Consequuntur necessitatibus iste amet id, nihil laboriosam voluptatem cum laudantium ab repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis,
+      enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+    
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+    
+      <p> Eipsum dolor sit amet, consectetur adipisicing elit. Quisquam temporibus repellat voluptatem sit nulla commodi, maxime optio aperiam! Consequuntur necessitatibus iste amet id, nihil laboriosam voluptatem cum laudantium ab repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+    
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+    
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam temporibus repellat voluptatem sit nulla commodi, maxime optio aperiam! Consequuntur necessitatibus iste amet id, nihil laboriosam voluptatem cum laudantium ab repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+    
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis.<p>
+    
+      <p> ipsum dolor sit amet, consectetur adipisicing elit. Quisquam temporibus repellat voluptatem sit nulla commodi, maxime optio aperiam! Consequuntur necessitatibus iste amet id, nihil laboriosam voluptatem cum laudantium ab repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+    
+      </p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+    
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+    
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Eipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
+    </main>
 </body>
 </html>

@@ -5,52 +5,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
- 
- <script>
-(function() {
-
-'use strict';
-
-var m = document.querySelector("main"),
-  h = document.querySelector("header"),
-  hHeight;
-
-function setTopPadding() {
-  hHeight = h.offsetHeight;
-  m.style.paddingTop = hHeight + "px";
-}
-
-function onScroll() {
-
-  window.addEventListener("scroll", _.throttle(callbackFunc, 200));
-  /**
-   * Replace the line above with the following one 
-   * to see how many more times the "callbackFunc" is executed
-   */
-  // window.addEventListener("scroll", callbackFunc);
-
-  function callbackFunc() {
-    c.style.visibility = "visible";
-    c.innerHTML = counter++;
-    var y = window.pageYOffset;
-    if (y > 150) {
-      h.classList.add("scroll");
-    } else {
-      h.classList.remove("scroll");
-    }
-  }
-}
-
-window.onload = function() {
-  setTopPadding();
-  onScroll();
-};
-
-window.onresize = function() {
-  setTopPadding();
-};
-})();
-        </script>
     </head>
     <body>
         <header>
@@ -66,8 +20,7 @@ window.onresize = function() {
               </ul>
               <button class="toggle-menu" aria-label="Responsive Navigation Menu">☰</button>
             </nav>
-          </header>
-          
+          </header>          
           <main>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam temporibus repellat voluptatem sit nulla commodi, maxime optio aperiam! Consequuntur necessitatibus iste amet id, nihil laboriosam voluptatem cum laudantium ab repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis,
             enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum blanditiis, enim beatae, ipsam tempore, ullam voluptas consequuntur laborum, dolor nobis nam velit iure. Autem veniam atque quo, sunt veritatis!</p>
@@ -92,5 +45,6 @@ window.onresize = function() {
           </main>
           
           <div class="counter"></div>
+          <script src="js/menulock.js"></script>
     </body>
 </html>
