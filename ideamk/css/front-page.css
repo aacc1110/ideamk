@@ -2,8 +2,8 @@
 body{
   overflow: hidden;
 }
-#advertise{
-  display: inline;
+#top-banner{
+  display: flex;
   width: 100%;
   height: 200px;
   border: 3px solid black;
@@ -13,21 +13,20 @@ body{
   height: 700px;
   display: flex;
   flex-direction: row;
-  top: 0px;
-  left: 0px;
   border: 3px solid red;
-  padding: 0 0 0 0;
 }
+
 #map{
   flex-basis: 65%;
-  height: 70%; 
+  height: 100%; 
   border: 3px solid black;
 }
 #list-house{
   flex-basis: 35%;
-  height: 70%;
+  height: 100%;
   font-size: 1.2rem;
   margin-left: 0.2rem;
   border: 3px solid black;
   overflow: scroll;
 }
+
