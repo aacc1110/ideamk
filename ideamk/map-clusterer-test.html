@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>cluserer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+    <script>
+
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+//usage:
+readTextFile("words.json", function(text){
+    var jsonArray = JSON.parse(text);
+    alert(jsonArray.length);
+var html = "";
+for (var i=0; i<jsonArray.length; i++) {
+	var data = ""
+	for (key in jsonArray[i]) {
+		data += key + " = " + jsonArray[i][key] + " ";
+  }
+  html += "<li>" + data + "</li>";
+}
+
+document.write(html);
+});
+
+
+    </script>
+    </body>
+</html>

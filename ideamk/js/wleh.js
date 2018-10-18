@@ -190,7 +190,7 @@ function displayPagination(pagination) {
             el.onclick = (function(i) {
                 return function() {
                     pagination.gotoPage(i);
-                }
+                };
             })(i);
         }
 

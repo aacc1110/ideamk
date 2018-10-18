@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        <title></title>
+        <title>front-page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/front-page.css" rel="stylesheet">
-        <link href="css/map.css" rel="stylesheet">
+        <link href="css/wleh.css" rel="stylesheet">
     </head>
     <body>
         <div id="top-banner">
-
+            banner
         </div>
         <div id="content">
-                <div class="map_wrap">
-                    <div id="map"></div>
-                    
-                        <div id="menu_wrap" class="bg_white">
-                            <div class="option">
-                                <div>
-                                    <form onsubmit="searchPlaces(); return false;">
-                                        키워드 : <input type="text" id="keyword" size="15"> 
-                                        <button type="submit">검색하기</button> 
-                                    </form>
-                                </div>
-                            </div>
-                            <hr>
-                            <ul id="placesList"></ul>
-                            <div id="pagination"></div>
-                        </div>
-                    </div>
-
-                        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6b811e98d34f3d452f0677233ff09eef&libraries=services"></script>
-                        <script src="js/daum.map.js"></script>
-
-                <div id="list-house" style="overflow: auto;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat hendrerit feugiat. In cursus nisl id arcu ullamcorper, eget euismod ante tincidunt. Cras placerat facilisis semper. Nam vel nisl sit amet justo interdum luctus. Mauris eu felis pretium velit mollis molestie. Nam aliquet a tellus ut pretium. Pellentesque fermentum nulla tempus mauris sagittis, eget imperdiet quam tristique. Pellentesque quis mauris mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales turpis fringilla ligula rutrum, eget mattis justo bibendum. Integer imperdiet mi non cursus bibendum. Nullam vitae cursus justo. Integer quis elit sit amet arcu pellentesque  sit amet a sapien. Aliquam tincidunt felis eget quam euismod cursus. Suspendisse lobortis ut elit vitae rhoncus. Ut tincidunt, ante eu egestas sodales, dui nulla aliquet mi, a eleifend lacus risus sit amet lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat hendrerit feugiat. In cursus nisl id arcu ullamcorper, eget euismod ante tincidunt. Cras placerat facilisis semper. Nam vel nisl sit amet justo interdum luctus. Mauris eu felis pretium velit mollis 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat hendrerit feugiat. In cursus nisl id arcu ullamcorper, eget euismod ante tincidunt. Cras placerat facilisis semper. Nam vel nisl sit amet justo interdum luctus. Mauris eu felis pretium velit mollis molestie. Nam aliquet a tellus ut pretium. Pellentesque fermentum nulla tempus mauris sagittis, eget imperdiet quam tristique. Pellentesque quis mauris mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales turpis fringilla ligula rutrum, eget mattis justo bibendum. Integer imperdiet mi non cursus bibendum. Nullam vitae cursus justo. Integer quis elit sit amet arcu pellentesque  sit amet a sapien. Aliquam tincidunt felis eget quam euismod cursus. Suspendisse lobortis ut elit vitae rhoncus. Ut tincidunt, ante eu egestas sodales, dui nulla aliquet mi, a eleifend lacus risus sit amet lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat hendrerit feugiat. In cursus nisl id arcu ullamcorper, eget euismod ante tincidunt. Cras placerat facilisis semper. Nam vel nisl sit amet justo interdum luctus. Mauris eu felis pretium velit mollis             
-                </div>
+            <div class="map_wrap">
+                <div id="map"></div>
             </div>
 
-      
+            <!-- services와 clusterer, drawing 라이브러리 불러오기 -->
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=12f6c204227a0a0afa64c7ef30936845&libraries=services,clusterer,drawing"></script>
+                    <script type="text/javascript" src="js/wleh.js"></script>
+
+            <div id="list-house">
+                <div id="menu_wrap" class="bg_white">
+                        <div class="option">
+                            <div>
+                                <form onsubmit="searchPlaces(); return false;">
+                                    키워드 : <input type="text" id="keyword" size="15"> 
+                                    <button type="submit">검색하기</button> 
+                                </form>
+                            </div>
+                        </div>
+                        <hr>
+                        <ul id="placesList"></ul>
+                        <div id="pagination"></div>
+                </div>          
+            </div>
+        </div>      
     </body>
 </html>
 
