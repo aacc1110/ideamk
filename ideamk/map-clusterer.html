@@ -14,20 +14,41 @@
                <a href="wleh.json" target="_blank">여기를 클릭하세요!</a>
             </em>
         </p>
-        <div id="map" style="width:100%;height:500px;"></div>
+        <div id="map" style="width:100%;height:600px;"></div>
         <script type="text/javascript" src="wleh.json"></script>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=12f6c204227a0a0afa64c7ef30936845&libraries=clusterer"></script>
         <script>
-            var map = new daum.maps.Map(document.getElementById('map'), { // 지도를 표시할 div
-                center : new daum.maps.LatLng(36.2683, 127.6358), // 지도의 중심좌표 
-                level : 14 // 지도의 확대 레벨 
-            });
+        var map = new daum.maps.Map(document.getElementById('map'), 
+        { // 지도를 표시할 div
+            center : new daum.maps.LatLng(36.2683, 127.6358), // 지도의 중심좌표 
+            level : 6 // 지도의 확대 레벨 
+        });
+            // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
+            if (navigator.geolocation) {
+        
+            // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+            locPosition=navigator.geolocation.getCurrentPosition(function(position) {
+            
+            var lat = position.coords.latitude, // 위도
+                lon = position.coords.longitude; // 경도
+            
+            var locPosition = new daum.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+                message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
+                alert(locPosition);
+                // 지도 중심좌표를 접속위치로 변경합니다
+                map.setCenter(locPosition);
+            });    
+            } else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
+                
+                var locPosition = new daum.maps.LatLng(33.450701, 126.570667),   
+                    message = 'geolocation을 사용할수 없어요..'                    
+            }            
             
             // 마커 클러스터러를 생성합니다 
             var clusterer = new daum.maps.MarkerClusterer({
                 map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체 
                 averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정 
-                minLevel: 7 // 클러스터 할 최소 지도 레벨 
+                minLevel: 3 // 클러스터 할 최소 지도 레벨 
             });
          
             // 데이터를 가져오기 위해 jQuery를 사용합니다
@@ -35,16 +56,19 @@
             $.get("wleh.json", function(data) {
                 // 데이터에서 좌표 값을 가지고 마커를 표시합니다
                 // 마커 클러스터러로 관리할 마커 객체는 생성할 때 지도 객체를 설정하지 않습니다
-                alert(data.positions[1].lng);
+                // 마커들을 저장할 변수
                 var markers = $(data.positions).map(function(i, position) {
+                    // 마커를 하나 새로 만드는데, 위치값을 지정하고 클릭이 가능하게 설정함
                     return new daum.maps.Marker({
-                        position : new daum.maps.LatLng(position.lat, position.lng)
+                        position : new daum.maps.LatLng(position.lat, position.lng),
+                        clickable : true
                     });
                 });
         
                 // 클러스터러에 마커들을 추가합니다
                 clusterer.addMarkers(markers);
             });
+ 
         </script>
     </body>
 </html>
