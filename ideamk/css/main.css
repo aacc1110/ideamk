@@ -51,6 +51,9 @@ table {
 /* 기본 및 PC */
 body{
   overflow: hidden;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 a{
   text-decoration: none;
@@ -69,7 +72,7 @@ header a{
 @media all and (min-width:380px){
 header{
   width: 100%;
-  height: 2.7rem;
+  height: 2.6rem;
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -103,12 +106,13 @@ header nav ul li{
 }
 /* -------------- content --------------------*/
 main{
-  padding: 50px 7px 0 0;
+  padding: 2.6rem 0 0 0;
   margin: 0 0 0 0;
+
 }
 #front-include{
   width: 100%;
-  height: 940px;
+  height: 970px;
   border: 3px solid red;
   margin: 0 0 0 0;
 }
