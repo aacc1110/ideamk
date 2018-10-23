@@ -24,16 +24,15 @@ function readTextFile(file, callback) {
 //usage:
 readTextFile("words.json", function(text){
     var jsonArray = JSON.parse(text);
-    alert(jsonArray.length);
 var html = "";
-for (var i=0; i<jsonArray.length; i++) {
-	var data = ""
-	for (key in jsonArray[i]) {
-		data += key + " = " + jsonArray[i][key] + " ";
+for (var i=0; i<jsonArray.aa.length; i++) {
+    var data = ""
+	for (key in jsonArray.aa[i]) {
+		data += key + " = " + jsonArray.aa[i][key] + " ";
   }
   html += "<li>" + data + "</li>";
-}
 
+}
 document.write(html);
 });
 
