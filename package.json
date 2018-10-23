@@ -1,0 +1,26 @@
+{
+  "name": "ideamk",
+  "version": "1.0.0",
+  "description": "html, javascript, node.js, css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aacc1110/ideamk.git"
+  },
+  "keywords": [
+    "minor"
+  ],
+  "author": "hsc",
+  "license": "ISC",
+  "bugs": {
+    "url": "http://localhost:8080"
+  },
+  "homepage": "http://localhost:8080",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
